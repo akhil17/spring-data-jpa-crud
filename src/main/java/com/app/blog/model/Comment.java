@@ -3,6 +3,9 @@ package com.app.blog.model;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -11,14 +14,23 @@ public class Comment {
 
 	public Comment() {};
 	
-	private String commentId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long commentId;
 	private String comment;
 	private Timestamp time;
+	private String emailId;
 	
-	public String getCommentId() {
+	public String getEmailId() {
+		return emailId;
+	}
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+	public long getCommentId() {
 		return commentId;
 	}
-	public void setCommentId(String commentId) {
+	public void setCommentId(long commentId) {
 		this.commentId = commentId;
 	}
 	public String getComment() {
