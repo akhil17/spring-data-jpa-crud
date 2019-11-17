@@ -18,9 +18,18 @@ public class Comment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	private long postId;
 	private String comment;
 	private Timestamp time;
 	private String emailId;
+
+	public long getPostId() {
+		return postId;
+	}
+
+	public void setPostId(long postId) {
+		this.postId = postId;
+	}
 
 	public String getEmailId() {
 		return emailId;
