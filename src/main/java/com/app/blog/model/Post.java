@@ -15,7 +15,7 @@ public class Post {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long postId; 
+	private long id; 
 	private String title;
 	private String description;
 	private String emailId;
@@ -26,11 +26,11 @@ public class Post {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public long getPostId() {
-		return postId;
+	public long getId() {
+		return id;
 	}
-	public void setPostId(long postId) {
-		this.postId = postId;
+	public void setId(long id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;

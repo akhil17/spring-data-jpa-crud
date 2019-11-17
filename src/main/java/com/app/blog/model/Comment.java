@@ -16,7 +16,7 @@ public class Comment {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long commentId;
+	private long id;
 	private String comment;
 	private Timestamp time;
 	private String emailId;
@@ -27,11 +27,11 @@ public class Comment {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public long getCommentId() {
-		return commentId;
+	public long getId() {
+		return id;
 	}
-	public void setCommentId(long commentId) {
-		this.commentId = commentId;
+	public void setId(long id) {
+		this.id = id;
 	}
 	public String getComment() {
 		return comment;
